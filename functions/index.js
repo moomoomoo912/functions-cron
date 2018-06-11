@@ -18,3 +18,8 @@ exports.hourly_job =
   functions.pubsub.topic('hourly-tick').onPublish((event) => {
     console.log("This job is ran every hour!")
   });
+
+  exports.min_job =
+  functions.pubsub.topic('min-tick').onPublish((event) => {
+    console.log("This job is ran every minute!")
+  });
